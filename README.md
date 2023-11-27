@@ -1,5 +1,5 @@
-## FUNDAMENTOS DE PROGRAMACIÓN. Curso 2022/23
-### PRIMER EXAMEN PARCIAL. Enero 2023
+## FUNDAMENTOS DE PROGRAMACIÓN. 
+### EXTENSIÓN PRIMER EXAMEN PARCIAL. Enero 2023
 
 Se tienen datos sobre un conjunto de partidos de tenis disputados al mejor de tres sets, de forma que gana el partido el primer jugador que gana dos sets. Si cada jugador gana uno de los dos primeros, se disputa un tercer set. En ese caso, el que gana este éltimo set gana el partido. Los datos tienen esta forma:
 
