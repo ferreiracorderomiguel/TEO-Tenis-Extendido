@@ -1,5 +1,5 @@
-## FUNDAMENTOS DE PROGRAMACIÓN. 
-### EXTENSIÓN PRIMER EXAMEN PARCIAL. Enero 2023
+## FUNDAMENTOS DE PROGRAMACIÓN.
+### EXTENSIÓN DEL PRIMER EXAMEN PARCIAL. Enero 2023
 
 Se tienen datos sobre un conjunto de partidos de tenis disputados al mejor de tres sets, de forma que gana el partido el primer jugador que gana dos sets. Si cada jugador gana uno de los dos primeros, se disputa un tercer set. En ese caso, el que gana este éltimo set gana el partido. Los datos tienen esta forma:
 
@@ -14,7 +14,7 @@ La información de cada línea se corresponde con lo siguiente:
 - **primer jugador**: nombre del primer jugador, de tipo str.
 - **segundo jugador**: nombre del segundo jugador, de tipo str.
 - **superficie**: superficie en la que se juega el partido, de tipo str.
-- **resultado del primer set**: resultado del primer set en formato int-int. El primer némero representa los juegos ganados por el primer jugador y el segundo los que ha ganado el segundo jugador. El jugador que más puntos tiene es el que gana el set.
+- **resultado del primer set**: resultado del primer set en formato int-int. El primer número representa los juegos ganados por el primer jugador y el segundo los que ha ganado el segundo jugador. El jugador que más puntos tiene es el que gana el set.
 - **resultado del segundo set**: resultado del segundo set en formato int-int.
 - **resultado del tercer set**: resultado del tercer set en formato int-int. Si el tercer set no se ha jugado aparecerá como 0-0.
 - **errores no forzados del primer jugador**: errores no forzados del jugador 1, de tipo int.
@@ -44,9 +44,9 @@ Cree un módulo **tenis.py** e implemente en él las funciones que se piden. Pue
    
     a. **parsea\_set**: Toma una cadena con el resultado de un set o parcial y devuelve una tupla de tipo Parcial que representa ese set. La cadena de entrada se espera que tenga los juegos del set del primer jugador, seguido de un guión y los juegos del set del segundo jugador, es decir, int-int. 
 
-1. **partidos\_menos\_errores**: recibe una lista de tipo PartidoTenis y devuelve el partido con mayor némero de errores no forzados entre los dos jugadores.
+1. **partidos\_menos\_errores**: recibe una lista de tipo PartidoTenis y devuelve el partido con menor número de errores no forzados entre los dos jugadores.
 
-1. **jugador\_mas\_partidos**: recibe una lista de tipo PartidoTenis y devuelve una tupla con el nombre del jugador que más partidos ha jugado y el némero de partidos. 
+1. **jugador\_mas\_partidos**: recibe una lista de tipo PartidoTenis y devuelve una tupla con el nombre del jugador que más partidos ha jugado y el número de partidos. 
 
 1. **tenista\_mas\_victorias**: recibe una lista de tuplas de tipo PartidoTenis, y dos fechas, **ambas de tipo date**, y con valor por defecto None. Devuelve el nombre del tenista que ha tenido más victorias en los partidos jugados entre las fechas (ambas inclusive). Si la primera fecha es None, la función  devuelve el tenista con más victorias hasta esa fecha (inclusive). Si la segunda fecha es None, la función devuelve el tenista con más victorias desde esa fecha (inclusive). Finalmente, si las dos fechas son None, la función devuelve el tenista con más victorias de toda la lista, independientemente de la fecha. Para implementar esta función defina la siguiente función auxiliar:
    a. **ganador**:** recibe una tupla de tipo PartidoTenis y devuelve el nombre del jugador que ganó ese partido. 
@@ -55,23 +55,23 @@ Cree un módulo **tenis.py** e implemente en él las funciones que se piden. Pue
 
 1. **jugadores\_mayor\_porcentaje\_victorias**: recibe una lista de tuplas de tipo PartidoTenis y devuelve una lista de tuplas con el nombre de cada jugador y el porcentaje de victorias. La lista estará ordenada por el porcentaje de victorias de mayor a menor.
 
-1. **n\_tenistas\_con\_mas\_errores**: recibe una lista de tuplas de tipo PartidoTenis y un némero n, con valor por defecto None, y devuelve una lista con los nombres de los n tenistas que han acumulado más errores no forzados en el total de partidos que han jugado. Si n es None, entonces devuelve todos los tenistas de la lista de tuplas ordenados de mayor a menor némero de errores no forzados. (2 puntos)
+1. **n\_tenistas\_con\_mas\_errores**: recibe una lista de tuplas de tipo PartidoTenis y un número n, con valor por defecto None, y devuelve una lista con los nombres de los n tenistas que han acumulado más errores no forzados en el total de partidos que han jugado. Si n es None, entonces devuelve todos los tenistas de la lista de tuplas ordenados de mayor a menor número de errores no forzados. (2 puntos)
 
 1. **fechas\_ordenadas\_por\_jugador**: recibe una lista de tuplas de tipo PartidoTenis y devuelve un diccionario en el que a cada jugador le hace corresponder una lista ordenada con las fechas de sus partidos.
 
-1. **num\_partidos\_nombre**: recibe el nombre de un tenista y devuelve un diccionario en el que las claves son las superficies y los valores una tupla con el némero de partidos jugados y ganados por el tenista en la superficie dada como clave.
+1. **num\_partidos\_nombre**: recibe el nombre de un tenista y devuelve un diccionario en el que las claves son las superficies y los valores una tupla con el número de partidos jugados y ganados por el tenista en la superficie dada como clave.
 
-1. **num\_tenistas\_distintos\_por\_superficie**: recibe una lista de tuplas de tipo PartidoTenis, y devuelve un diccionario tal que a cada superficie (clave) le hace corresponder el némero de jugadores distintos que han jugado partidos en ese tipo de superficie. (1,5 puntos) 
+1. **num\_tenistas\_distintos\_por\_superficie**: recibe una lista de tuplas de tipo PartidoTenis, y devuelve un diccionario tal que a cada superficie (clave) le hace corresponder el número de jugadores distintos que han jugado partidos en ese tipo de superficie. (1,5 puntos) 
 
-1. **superficie\_con\_mas\_tenistas\_distintos**: recibe una lista de tuplas de tipo PartidoTenies y devuelve una tupla con la superficie en la que juegan un mayor némero de jugadores distintos, y el némero de jugadores que han jugado en esa superficie.
+1. **superficie\_con\_mas\_tenistas\_distintos**: recibe una lista de tuplas de tipo PartidoTenies y devuelve una tupla con la superficie en la que juegan un mayor número de jugadores distintos, y el número de jugadores que han jugado en esa superficie.
 
-1. **mas\_errores\_por\_jugador**: recibe una lista de tuplas de tipo PartidoTenis y devuelve un diccionario en el que a cada jugador y le hace corresponder el partido en el que ha cometido mayor némero de errores no forzados.
+1. **mas\_errores\_por\_jugador**: recibe una lista de tuplas de tipo PartidoTenis y devuelve un diccionario en el que a cada jugador y le hace corresponder el partido en el que ha cometido mayor número de errores no forzados.
 
 1. **partido\_mas\_errores\_por\_mes**: recibe una lista de tuplas de tipo PartidoTenis, y una lista de cadenas con tipos de superficie, que toma como valor por defecto None, y devuelve un diccionario que asocia a cada mes, una tupla (fecha del partido, jugador1, jugador2) que representa al partido de ese mes jugado en una de las superficies de la lista dada como parámetro en el que se han cometido más errores no forzados, teniendo en cuenta los errores de ambos jugadores. Si la lista de superficies dada como parámetro tiene como valor None, entonces se tendrán en cuenta todas las superficies para generar el diccionario resultante. (2 puntos).
 
 1. **n\_partidos\_mas\_errores\_por\_jugador**: recibe una lista de tuplas de tipo  PartidoTenis y un valor entero n y devuelve un diccionario en el que a cada jugador le hace corresponder una lista con los n partidos en los que ha cometido más errores no forzados.
 
-1. **mayor_numero_dias_sin_jugar**: recibe una lista de partidos y un jugador y devuelve el máximo némero de días sin jugar del jugador dado. Si el jugador solo ha disputado un partido devolverá None.
+1. **mayor_numero_dias_sin_jugar**: recibe una lista de partidos y un jugador y devuelve el máximo número de días sin jugar del jugador dado. Si el jugador solo ha disputado un partido devolverá None.
 
 1. Cree un módulo de **tenis\_test.py** y defina una función de test para cada función solicitada. Se recomienda el uso de parámetros en las funciones de test para reutilizar código. (1 punto)
 
@@ -730,5 +730,5 @@ Roger Federer --> [PartidoTenis(fecha=datetime.date(2018, 2, 3), jugador1='Roger
 Roberto Bautista Agut --> [PartidoTenis(fecha=datetime.date(2016, 1, 17), jugador1='Rafael Nadal', jugador2='Roberto Bautista Agut', superficie='Dura', resultado=[Parcial(juegos_j1=7, juegos_j2=6), Parcial(juegos_j1=6, juegos_j2=7), Parcial(juegos_j1=3, juegos_j2=6)], errores_nf1=12, errores_nf2=19), PartidoTenis(fecha=datetime.date(2017, 11, 1), jugador1='Roberto Bautista Agut', jugador2='Felix Auger-Aliassime', superficie='Dura', resultado=[Parcial(juegos_j1=6, juegos_j2=0), Parcial(juegos_j1=0, juegos_j2=6), Parcial(juegos_j1=6, juegos_j2=1)], errores_nf1=18, errores_nf2=9), PartidoTenis(fecha=datetime.date(2010, 10, 15), jugador1='Casper Ruud', jugador2='Roberto Bautista Agut', superficie='Hierba', resultado=[Parcial(juegos_j1=6, juegos_j2=0), Parcial(juegos_j1=6, juegos_j2=3), Parcial(juegos_j1=0, juegos_j2=0)], errores_nf1=5, errores_nf2=17)]
 EJERCICIO 14==================================================
 Test de 'test_mayor_numero_dias_sin_jugar' jugador=Carlos Alcaraz
-El mayor némero de días que el jugador Carlos Alcaraz ha estado sin jugar es 799
+El mayor número de días que el jugador Carlos Alcaraz ha estado sin jugar es 799
 ```
