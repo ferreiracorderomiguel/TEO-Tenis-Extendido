@@ -173,8 +173,19 @@ def fechas_ordenadas_por_jugador(partidos: List[PartidoTenis]) -> Dict[str, List
     return fechas_jugador_ordenado
 
 
-def num_partidos_nombre():
+def num_partidos_nombre(partidos: List[PartidoTenis], nom_tenista: str) -> Dict[str, List[Tuple[int, int]]]:
     '''
     Recibe el nombre de un tenista y devuelve un diccionario en el que las claves son las superficies y los
     valores una tupla con el número de partidos jugados y ganados por el tenista en la superficie dada como clave.
     '''
+    dict_partidos_superficies = defaultdict(lambda: (0, 0))
+
+    for partido in partidos:
+        if partido.jugador1 == nom_tenista or partido.jugador2 == nom_tenista:
+            partidos_jugados, partidos_ganados = dict_partidos_superficies[partido.superficie]
+            partidos_jugados += 1
+            if ganador(partido) == nom_tenista:
+                partidos_ganados += 1
+            dict_partidos_superficies[partido.superficie] = (partidos_jugados, partidos_ganados)
+
+    return dict_partidos_superficies

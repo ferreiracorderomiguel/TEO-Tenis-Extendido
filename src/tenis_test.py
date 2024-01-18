@@ -58,15 +58,25 @@ def test_fechas_por_jugador(partidos):
     print("Las fechas de cada partido por jugador son")
     for jugador, fechas in dict_fechas.items():
         print(f"{jugador} --> {fechas}")
+
+
+def test_num_partidos_nombre(partidos, nombre):
+    print("EJERCICIO  9==================================================")
+    dict_partidos = num_partidos_nombre(partidos, nombre)
+    print(f"Test de 'num_partidos_nombre' nombre:{nombre}")
+    print(f"Los partidos jugados y ganados por superficie de {nombre} son")
+    for superficie, puntos in dict_partidos.items():
+        print(f"{superficie} --> {puntos}")
     
 
 if __name__ == "__main__":
     partidos = lee_partidos_tenis("data/tenis.csv")
-    # test_lee_partidos_tenis(partidos)
-    # test_partidos_menos_errores(partidos_menos_errores(partidos))
-    # test_jugador_mas_partidos(jugador_mas_partidos(partidos))
-    # test_tenista_mas_victorias(tenista_mas_victorias(partidos))
-    # test_media_errores_por_jugador(partidos)
-    # test_jugadores_mayor_porcentaje_victorias(partidos)
-    # test_n_tenistas_con_mas_errores(partidos, 5)
+    test_lee_partidos_tenis(partidos)
+    test_partidos_menos_errores(partidos_menos_errores(partidos))
+    test_jugador_mas_partidos(jugador_mas_partidos(partidos))
+    test_tenista_mas_victorias(tenista_mas_victorias(partidos))
+    test_media_errores_por_jugador(partidos)
+    test_jugadores_mayor_porcentaje_victorias(partidos)
+    test_n_tenistas_con_mas_errores(partidos, 5)
     test_fechas_por_jugador(partidos)
+    test_num_partidos_nombre(partidos, "Rafael Nadal")
