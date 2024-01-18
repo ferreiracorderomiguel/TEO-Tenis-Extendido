@@ -157,5 +157,24 @@ def n_tenistas_con_mas_errores(partidos: List[PartidoTenis], n:int=None) -> List
 
 def fechas_ordenadas_por_jugador(partidos: List[PartidoTenis]) -> Dict[str, List[datetime]]:
     '''
-    Recibe una lista de tuplas de tipo PartidoTenis y devuelve un diccionario en el que a cada jugador le hace corresponder una lista ordenada con las fechas de sus partidos.
+    Recibe una lista de tuplas de tipo PartidoTenis y devuelve un diccionario en el que a cada jugador
+    le hace corresponder una lista ordenada con las fechas de sus partidos.
+    '''
+    fechas_jugador = defaultdict(list)
+    fechas_jugador_ordenado = defaultdict(list)
+
+    for partido in partidos:
+        fechas_jugador[partido.jugador1].append(partido.fecha)
+        fechas_jugador[partido.jugador2].append(partido.fecha)
+
+    for jugador, lista_fechas in fechas_jugador.items():
+        fechas_jugador_ordenado[jugador] = sorted(lista_fechas)
+
+    return fechas_jugador_ordenado
+
+
+def num_partidos_nombre():
+    '''
+    Recibe el nombre de un tenista y devuelve un diccionario en el que las claves son las superficies y los
+    valores una tupla con el número de partidos jugados y ganados por el tenista en la superficie dada como clave.
     '''

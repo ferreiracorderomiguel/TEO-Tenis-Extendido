@@ -53,11 +53,11 @@ def test_n_tenistas_con_mas_errores(partidos, n):
 
 def test_fechas_por_jugador(partidos):
     print("EJERCICIO  8==================================================")
-    fechas = fechas_por_jugador(partidos)
+    dict_fechas = fechas_ordenadas_por_jugador(partidos)
     print("Test de 'fechas_por_jugador'")
     print("Las fechas de cada partido por jugador son")
-    for i in fechas:
-        print(f"{i[0]} --> {fechas[1]}")
+    for jugador, fechas in dict_fechas.items():
+        print(f"{jugador} --> {fechas}")
     
 
 if __name__ == "__main__":
